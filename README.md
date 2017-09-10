@@ -33,7 +33,7 @@ end
 ```
 
 ```
-$ ./job_queue_sample.rb
+$ ./main.rb
 D, [2017-09-10T18:17:00.900136 #9260] DEBUG -- : sender_thread0 : push job=thread 0
 D, [2017-09-10T18:17:00.900763 #9260] DEBUG -- : sender_thread3 : push job=thread 3
 D, [2017-09-10T18:17:00.999368 #9260] DEBUG -- : sender_thread1 : push job=thread 1
