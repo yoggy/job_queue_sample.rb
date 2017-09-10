@@ -61,7 +61,13 @@ D, [2017-09-10T18:17:01.800915 #9260] DEBUG -- : reciever_thread : shift job=thr
 D, [2017-09-10T18:17:01.801894 #9260] DEBUG -- : sender_thread0 : push job=thread 0
 ```
 
-see also... https://docs.ruby-lang.org/ja/1.8.7/class/ConditionVariable.html
+References
+----
+* Guarded suspension - Wikipedia
+  * https://en.wikipedia.org/wiki/Guarded_suspension
+
+* class ConditionVariable (Ruby 1.8.7)
+  * https://docs.ruby-lang.org/ja/1.8.7/class/ConditionVariable.html
 
 Copyright and license
 ----
