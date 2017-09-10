@@ -1,45 +1,21 @@
-#!/bin/ruby
+#!/usr/bin/ruby
 #
-# job_queue_sample.rb
+# job_queue_sample.rb - How to use JobQueue class
 #
-# see also... https://docs.ruby-lang.org/ja/1.8.7/class/ConditionVariable.html
+# github:
+#     https://github.com/yoggy/job_queue_sample.rb
 #
-require 'thread'
+# license:
+#     Copyright (c) 2017 yoggy <yoggy0@gmail.com>
+#     Released under the MIT license
+#     http://opensource.org/licenses/mit-license.php;
+#
 require 'logger'
+require_relative 'job_queue'
 
 Thread.abort_on_exception = true
 
 $log = Logger.new(STDOUT)
-
-class JobQueue
-  def initialize()
-    @m = Mutex.new
-    @c = ConditionVariable.new
-    @q = Queue.new
-  end
-
-  def push(job)
-    @m.synchronize do
-      @q.push(job)
-      @c.signal
-    end
-  end
-
-  def shift()
-    @m.synchronize do
-      @c.wait(@m) if @q.size == 0
-      job = @q.shift
-      return job
-    end
-  end
-
-  def size
-    @m.synchronize do
-      return @q.size
-    end
-  end
-end
-
 threads = []
 job_queue = JobQueue.new
 
