@@ -69,6 +69,9 @@ References
 * class ConditionVariable (Ruby 1.8.7)
   * https://docs.ruby-lang.org/ja/1.8.7/class/ConditionVariable.html
 
+* class Thread::Queue (Ruby 2.4.0)
+  * https://docs.ruby-lang.org/ja/latest/class/Thread=3a=3aQueue.html
+
 Copyright and license
 ----
 Copyright (c) 2017 yoggy
